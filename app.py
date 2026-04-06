@@ -1,8 +1,9 @@
 import pandas as pd
 import streamlit as st
-import pickle
-model = pickle.load(open("model.pkl", "rb"))
-vectorizer = pickle.load(open("vectorizer.pkl", "rb"))
+import joblib
+
+model = joblib.load("model.pkl")
+vectorizer = joblib.load("vectorizer.pkl")
 st.title("Fake News Detection App")
 user_input=st.text_area("Enter news..")
 if st.button("Click News"):
