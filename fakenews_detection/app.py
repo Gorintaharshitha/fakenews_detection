@@ -8,7 +8,7 @@ vectorizer = joblib.load(os.path.join(BASE_DIR, "vectorizer.pkl"))
 st.title("Fake News Detection App")
 user_input=st.text_area("Enter news article:")
 if st.button("Check News"):
-    if user_input().strip()=="":
+    if user_input.strip()=="":
         st.warning("please enter some news text.")
     else:
 
