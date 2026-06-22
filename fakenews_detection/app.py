@@ -5,6 +5,15 @@ import os
 BASE_DIR =os.path.dirname(os.path.abspath(__file__))
 model = joblib.load(os.path.join(BASE_DIR, "model.pkl"))
 vectorizer = joblib.load(os.path.join(BASE_DIR, "vectorizer.pkl"))
+import streamlit as st
+
+st.markdown("""
+<style>
+.stApp {
+    background-color: #f4f6f9;
+}
+</style>
+""", unsafe_allow_html=True)
 st.title("Fake News Detection-web Application")
 st.info(""" 
 Instructions:
