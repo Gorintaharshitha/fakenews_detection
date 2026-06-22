@@ -6,7 +6,10 @@ BASE_DIR =os.path.dirname(os.path.abspath(__file__))
 model = joblib.load(os.path.join(BASE_DIR, "model.pkl"))
 vectorizer = joblib.load(os.path.join(BASE_DIR, "vectorizer.pkl"))
 st.title("Fake News Detection-web Application")
-st.info(""" Instruction:\n1.Enter a complete news article.\n2.Avoid short Sentences.\n3.click the 'check news button' to seethe result.""")
+st.info(""" Instructions:
+        1.Enter a complete news article.
+        2.Avoid short Sentences.
+        3.click the 'check news button' to seethe result.""")
 user_input=st.text_area("Enter news article:")
 if st.button("Check News"):
     if user_input.strip()=="":
