@@ -27,7 +27,7 @@ if st.button("Check News"):
             st.success("Real News")
         else:
             st.error("Fake News")
-st.caption(
-    "Note:Predictions are based on machine learning model trained on historical news data and may not verify current news events."
+st.markdown(
+    "**Note:**Predictions are based on machine learning model trained on historical news data and may not verify current news events."
     )
 st.markdown("**Developed by Harshitha**")
