@@ -18,7 +18,7 @@ Instructions:
 user_input=st.text_area("Enter news article:")
 if st.button("Check News"):
     if user_input.strip()=="":
-        st.warning("please enter anews article.")
+        st.warning("please enter a news article.")
     else:
 
         input_data=vectorizer.transform([user_input])
@@ -27,5 +27,7 @@ if st.button("Check News"):
             st.success("Real News")
         else:
             st.error("Fake News")
-st.caption("Note:Predictions are based on machine learning model trained on historical news data and may not verify current news events.")
+st.caption(
+    "Note:Predictions are based on machine learning model trained on historical news data and may not verify current news events."
+    )
 st.markdown("**Developed by Harshitha**")
