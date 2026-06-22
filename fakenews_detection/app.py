@@ -2,6 +2,20 @@ import pandas as pd
 import streamlit as st
 import joblib
 import os 
+st.markdown("""
+<style>
+.stApp {
+    background-color: #f4f6f9;
+}
+
+.main {
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+</style>
+""", unsafe_allow_html=True)
 BASE_DIR =os.path.dirname(os.path.abspath(__file__))
 model = joblib.load(os.path.join(BASE_DIR, "model.pkl"))
 vectorizer = joblib.load(os.path.join(BASE_DIR, "vectorizer.pkl"))
