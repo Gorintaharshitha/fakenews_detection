@@ -11,14 +11,14 @@ Instructions:
         
 1.Enter a complete news article.
         
-2.Avoid short Sentences.
+2.Avoid  very short Sentences.
         
- 3.click the 'check news button' to seethe result.
+ 3.click the 'check news button' to see the result.
 """)
 user_input=st.text_area("Enter news article:")
 if st.button("Check News"):
     if user_input.strip()=="":
-        st.warning("please enter some news text.")
+        st.warning("please enter anews article.")
     else:
 
         input_data=vectorizer.transform([user_input])
@@ -27,4 +27,5 @@ if st.button("Check News"):
             st.success("Real News")
         else:
             st.error("Fake News")
+st.caption("Note:Predictions are based on machine learning model trained on historical news data and may not verify current news events.")
 st.markdown("**Developed by Harshitha**")
