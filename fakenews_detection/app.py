@@ -18,3 +18,4 @@ if st.button("Check News"):
             st.success("Real News")
         else:
             st.error("Fake News")
+st.markdown("**Developed by Harshitha**")
